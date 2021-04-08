@@ -9,7 +9,7 @@ updates:
 
   - package-ecosystem: "nuget"
     # location of package manifests
-    directory: "/src"
+    directory: "/src/"
     open-pull-requests-limit: 100
     schedule:
       interval: "daily"
