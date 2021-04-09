@@ -33,7 +33,7 @@ jobs:
           npm install
           Pop-Location
 
-          dotnet build Swashbuckle.AspNetCore.sln -c Release
+          dotnet build -c Release
 
       - name: Perform CodeQL Analysis
         id: analyze_codeql
