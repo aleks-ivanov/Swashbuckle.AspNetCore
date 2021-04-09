@@ -25,6 +25,14 @@ jobs:
         id: build_project
         shell: pwsh
         run: |
+          Push-Location src/Swashbuckle.AspNetCore.SwaggerUI
+          npm install
+          Pop-Location
+
+          Push-Location src/Swashbuckle.AspNetCore.ReDoc
+          npm install
+          Pop-Location
+
           dotnet build Swashbuckle.AspNetCore.sln -c Release
 
       - name: Perform CodeQL Analysis
