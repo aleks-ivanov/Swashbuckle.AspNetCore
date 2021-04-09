@@ -9,7 +9,7 @@ on:
 jobs:
   analyze:
     name: CodeQL Analysis
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         id: checkout_repo
@@ -35,7 +35,7 @@ jobs:
 
           nuget restore .\Swashbuckle.AspNetCore.sln
 
-          dotnet build -c Release
+          dotnet build .\Swashbuckle.AspNetCore.sln -c Release
 
       - name: Perform CodeQL Analysis
         id: analyze_codeql
